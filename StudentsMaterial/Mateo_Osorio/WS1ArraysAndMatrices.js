@@ -7,50 +7,36 @@
 
 // 1.   Sumar Elementos de un Vector
 //    - Descripción: Suma todos los elementos de un vector y muestra el resultado.
-
-let myArray = [1, 2, 3, 4, 5, 10, 7];
-let result;
-for (let i = 0; i < myArray.length; i++) {
-  if (i === 0) {
-    result = myArray[i];
-  } else {
-    result += myArray[i];
-  }
-}
-console.log(`➕ La suma es igual a ${result}`);
-
-//Practica con ForEach
-
-let myArray2 = [1, 2, 3, 4, 5, 10, 10];
-let result2 = 0;
-myArray2.forEach((element) => {
-  result2 += element;
-});
-
-console.log(`😊 La suma es igual a ${result2}`);
-
 // 2.   Encontrar el Máximo de un Vector
 //    - Descripción: Encuentra y muestra el valor máximo en un vector.
-
-let vector = [4, 6, 9, 10, 15];
-let MaxVector = 0;
-for (let i of vector) {
-  if (MaxVector < i) {
-    MaxVector = i;
-  }
-}
-console.log(`🌟 El número máximo es ${MaxVector}`);
-
-//Practicando con Math
-//... Traen copia de los elementos
-
-let array = [4, 5, 1, 9, 28, 100, 3];
-console.log(`😁 El valor máximo es ${Math.max(...array)}`);
-
 // 3.   Invertir un Vector
 //    - Descripción: Invierte el orden de los elementos de un vector y muestra el resultado.
 
 // Solucion.....
+
+// 1.   Sumar Elementos de un Vector
+
+let numbers = [1, 2, 3, 4, 5, 6];
+let suma = 0;
+for (i = 0; i < numbers.length; i++) {
+    suma += numbers[i];
+}
+console.log("La suma es: " + suma);
+
+// 2.   Encontrar el Máximo de un Vector
+
+let max = numbers[0];
+for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] > max) {
+        max = numbers[i];
+    }
+}
+console.log("El máximo es: " + max);
+
+// 3.   Invertir un Vector
+
+let arrReverse = numbers.reverse();
+console.log(arrReverse);
 
 // Ejercicios de Matrices sin funciones
 
@@ -68,6 +54,39 @@ console.log(`😁 El valor máximo es ${Math.max(...array)}`);
 //    - Descripción: Muestra los elementos de la diagonal principal de una matriz cuadrada.
 
 // Solucion.....
+
+// 1. Sumar Todos los Elementos de una Matriz
+
+let matrix = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9],
+];
+let suma2 = 0;
+for (i = 0; i < matrix.length; i++) {
+    for (j = 0; j < matrix.length; j++) {
+        suma2 += matrix[i][j]
+    }
+}
+console.log("La suma es: " + suma2);
+
+// 2. Encontrar el Máximo de una Matriz
+
+let max2 = 0;
+for (i = 0; i < matrix.length; i++) {
+    for (j = 0; j < matrix.length; j++) {
+        if (matrix[i][j] > max2) {
+            max2 = matrix[i][j];
+        }
+    }
+}
+console.log("El máximo es: " + max2);
+
+// 3. Mostrar los Elementos de la Diagonal Principal
+
+for (i = 0, j = 0; i < matrix.length; i++, j++) {
+    console.log("Elemento de la diagonal principal: " + matrix[i][j]);
+}
 
 // Ejercicios de Vectores con Funciones
 // let numbers = [1, 2, 3, 4, 5];
